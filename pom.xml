@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.lq</groupId>
+	<artifactId>demo</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<modules>
+		<module>demo-facade</module>
+		<module>demo-application</module>
+		<module>demo-biz</module>
+		<module>demo-dal</module>
+		<module>demo-integration</module>
+		<module>demo-util</module>
+		<module>demo-web</module>
+		<module>demo-web-biz</module>
+	</modules>
+
+	
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-facade</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-biz</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-dal</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-util</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-application</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-web-biz</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.lq</groupId>
+				<artifactId>demo-integration</artifactId>
+				<version>1.0.0-SNAPSHOT</version>
+			</dependency>
+		 <!-- 使用lombok实现JavaBean的get、set、toString、hashCode、equals等方法的自动生成 -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+		
+
+			<dependency>
+				<groupId>com.gitee.reger</groupId>
+				<artifactId>spring-boot-starter-dubbo</artifactId>
+				<version>1.0.7</version>
+			</dependency>
+
+			<!-- zookeeper的客户端依赖 -->
+			<!-- <dependency>
+				<groupId>com.101tec</groupId>
+				<artifactId>zkclient</artifactId>
+				<version>${zkclient.version}</version>
+				<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				</exclusions>
+			</dependency> -->
+
+			<!--lombook -->
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter</artifactId>
+				<version>1.5.8.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>1.5.8.RELEASE</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-activemq</artifactId>
+				<version>1.5.8.RELEASE</version>
+			</dependency>
+		
+	</dependencies>
+	</dependencyManagement>
+
+
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<dubbo.version>2.5.8</dubbo.version>
+		<zkclient.version>0.10</zkclient.version>
+		<lombok.version>1.16.18</lombok.version>
+		<fastjson.version>1.2.35</fastjson.version>
+		<tomcat.version>7.0.79</tomcat.version>
+	</properties>
+</project>
