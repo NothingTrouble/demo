@@ -39,7 +39,8 @@ public class QueueSender2 {
 		 
 		 System.out.println("消息发送结束。。。");
 		 System.out.println("消息发送结束。。。");
-			
+		 System.out.println("消息发送结束fatete1。。。");
+	
 		
 	}
 
